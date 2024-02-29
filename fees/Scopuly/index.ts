@@ -24,8 +24,8 @@ const fetch = async (timestamp: number) => {
     timestamp: dayTimestamp,
     totalFees: `${totalFee}`,
     dailyFees: dailyFee ? `${dailyFee}` : undefined,
-    totalRevenue: "0",
-    dailyRevenue: "0",
+    totalRevenue: '0',
+    dailyRevenue: '0',
   };
 };
 
