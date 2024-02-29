@@ -13,6 +13,7 @@ interface IChartItem {
 const fetch = async (timestamp: number) => {
   const dayTimestamp = getUniqStartOfTodayTimestamp(new Date(timestamp * 1000))
   const historicalFees: IVolumeall[] = (await fetchURL(feeEndpoint));
+  
   const totalFee = historicalVolume
     .filter(volItem => getUniqStartOfTodayTimestamp(new Date(Number(volItem.time))) <= dayTimestamp)
     .reduce((acc, { fees }) => acc + Number(fees), 0)
